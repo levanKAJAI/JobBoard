@@ -1,9 +1,9 @@
-# fly.toml app configuration file generated for jobboard-1x7yya on 2025-11-26T10:19:46Z
+# fly.toml app configuration file generated for jobboard-giiagg on 2025-11-26T10:47:07Z
 #
 # See https://fly.io/docs/reference/configuration/ for information about how to use this file.
 #
 
-app = 'jobboard-1x7yya'
+app = 'jobboard-giiagg'
 primary_region = 'fra'
 
 [build]
