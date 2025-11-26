@@ -1,0 +1,13 @@
+{% extends "base.html" %}{% block content %}<h1 class="mb-4 text-primary">ვაკანსიები</h1>
+    <div class="row g-4">{% for job in jobs %}
+        <div class="col-md-4">
+            <div class="card h-100 shadow-sm border-0">
+                <div class="card-body"><h5 class="card-title text-dark">{{ job.title }}</h5>
+                    <p class="card-text text-muted">{{ job.short_desc }}</p>
+                    <p class="small text-secondary">ავტორი: <a
+                            href="{{ url_for('main.author_jobs', user_id=job.author.id) }}">{{ job.author.name }}</a>
+                        • {{ job.date_posted.strftime('%Y-%m-%d') }}</p><a
+                            href="{{ url_for('main.job_detail', job_id=job.id) }}"
+                            class="btn btn-outline-primary w-100">წაიკითხე დაწვრილებით</a></div>
+            </div>
+        </div>{% else %}<p class="text-muted">ვაკანსიები ვერ მოიძებნა.</p>{% endfor %}</div>{% endblock %}

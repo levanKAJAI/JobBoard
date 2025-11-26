@@ -1,0 +1,34 @@
+{% extends "base.html" %}{% block content %}<h2>მომხმარებლების სია</h2>
+    <a href="{{ url_for('main.admin_add_user') }}" class="btn btn-success mb-3">მომხმარებლის დამატება</a>
+    <table class="table table-hover">
+        <thead>
+        <tr>
+            <th>ID</th>
+            <th>სახელი</th>
+            <th>ელფოსტა</th>
+            <th>როლი</th>
+            <th>ქმედება</th>
+        </tr>
+        </thead>
+        <tbody>{% for u in users %}
+            <tr>
+                <td>{{ u.id }}</td>
+                <td>{{ u.name }}</td>
+                <td>{{ u.email }}</td>
+                <td><span
+                        class="badge bg-{% if u.role=='admin' %}danger{% else %}secondary{% endif %}">{{ u.role }}</span>
+                </td>
+                <td>
+                    <form method="POST" class="d-flex gap-2"><input type="hidden" name="csrf_token"
+                                                                    value="{{ csrf_token() }}"><input type="hidden"
+                                                                                                      name="user_id"
+                                                                                                      value="{{ u.id }}"><select
+                            name="role" class="form-select form-select-sm" style="max-width: 160px;">
+                        <option value="user" {% if u.role=='user' %}selected{% endif %}>მომხმარებელი</option>
+                        <option value="admin" {% if u.role=='admin' %}selected{% endif %}>ადმინი</option>
+                    </select>
+                        <button class="btn btn-sm btn-primary" type="submit">შეცვლა</button>
+                    </form>
+                </td>
+            </tr>{% endfor %}</tbody>
+    </table>{% endblock %}

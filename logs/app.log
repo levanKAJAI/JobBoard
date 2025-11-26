@@ -1,0 +1,20 @@
+2025-11-25 14:37:25,115 - WARNING - Failed login attempt: leva.kajaia@gmail.com
+2025-11-25 16:12:02,092 - WARNING - Failed login attempt: leva.kajaia@gmail.com
+2025-11-25 16:12:27,489 - WARNING - Failed login attempt: leva.kajaia@gmail.com
+2025-11-25 16:12:34,488 - WARNING - Failed login attempt: leva.kajaia@gmail.com
+2025-11-26 11:05:41,089 - INFO - Successful login: admin@example.com
+2025-11-26 11:06:58,597 - WARNING - Failed login attempt: leva.kajaia@gmail.com
+2025-11-26 11:07:45,149 - WARNING - Failed login attempt: admin@example.com
+2025-11-26 11:07:58,003 - INFO - Successful login: admin@example.com
+2025-11-26 12:16:52,754 - WARNING - Login failed: leva.kajaia@gmail.com
+2025-11-26 12:17:07,534 - INFO - Login success: admin@example.com
+2025-11-26 12:34:44,560 - INFO - Login success: admin@example.com
+2025-11-26 12:35:41,062 - WARNING - Login failed: leva.kajaia@gmail.com
+2025-11-26 12:47:51,885 - INFO - Login success: admin@example.com
+2025-11-26 12:48:50,489 - INFO - Login success: levan@example.com
+2025-11-26 12:50:40,841 - INFO - Login success: admin@example.com
+2025-11-26 12:59:57,714 - INFO - Login success: admin@example.com
+2025-11-26 13:05:56,648 - INFO - Login success: admin@example.com
+2025-11-26 13:12:48,632 - INFO - Login success: admin@example.com
+2025-11-26 13:19:41,938 - INFO - Login success: test@test.com
+2025-11-26 13:20:44,208 - INFO - Login success: admin@example.com

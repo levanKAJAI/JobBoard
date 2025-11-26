@@ -1,0 +1,16 @@
+{% extends "base.html" %}{% block content %}
+    <h2>{% if edit %}ვაკანსიის რედაქტირება{% else %}ვაკანსიის დამატება{% endif %}</h2>
+    <form method="POST" class="mt-3" novalidate>{{ form.hidden_tag() }}
+        <div class="form-floating mb-3">{{ form.title(class="form-control", placeholder="Title") }}<label>{{ form.title.label }}</label>
+        </div>
+        <div class="form-floating mb-3">{{ form.short_desc(class="form-control", placeholder="Short Description") }}<label>{{ form.short_desc.label }}</label>
+        </div>
+        <div class="mb-3">{{ form.full_desc(class="form-control", rows=6) }}</div>
+        <div class="form-floating mb-3">{{ form.company(class="form-control", placeholder="Company") }}<label>{{ form.company.label }}</label>
+        </div>
+        <div class="form-floating mb-3">{{ form.salary(class="form-control", placeholder="Salary") }}<label>{{ form.salary.label }}</label>
+        </div>
+        <div class="form-floating mb-3">{{ form.location(class="form-control", placeholder="Location") }}<label>{{ form.location.label }}</label>
+        </div>
+        <div class="mb-3">{{ form.category(class="form-select") }}</div>
+        {{ form.submit(class="btn btn-primary") }}</form>{% endblock %}

@@ -1,0 +1,2 @@
+{% extends 'base.html' %}{% block content %}<h2>Edit Role for {{ user.name }}</h2>
+    <form method='POST'>{{ form.hidden_tag() }}{{ form.role }}{{ form.submit }}</form>{% endblock %}

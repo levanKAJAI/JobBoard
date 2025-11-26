@@ -1,0 +1,11 @@
+{% extends "base.html" %}{% block content %}<h2>რეგისტრაცია</h2>
+    <form method="POST" class="mt-3" novalidate>{{ form.hidden_tag() }}
+        <div class="form-floating mb-3">{{ form.name(class="form-control", placeholder="Name") }}<label>{{ form.name.label }}</label>
+        </div>
+        <div class="form-floating mb-3">{{ form.email(class="form-control", placeholder="Email") }}<label>{{ form.email.label }}</label>
+        </div>
+        <div class="form-floating mb-3">{{ form.password(class="form-control", placeholder="Password") }}<label>{{ form.password.label }}</label>
+        </div>
+        <div class="form-floating mb-3">{{ form.confirm_password(class="form-control", placeholder="Confirm Password") }}<label>{{ form.confirm_password.label }}</label>
+        </div>
+        {{ form.submit(class="btn btn-success w-100") }}</form>{% endblock %}

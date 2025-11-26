@@ -1,0 +1,15 @@
+{% extends "base.html" %}{% block content %}<h2>პროფილი</h2>
+    <div class="row">
+        <div class="col-md-4 text-center"><img
+                src="{{ url_for('static', filename='images/' ~ (user.image or 'default_profile.png')) }}" alt="profile"
+                class="img-thumbnail" style="max-width:200px"></div>
+        <div class="col-md-8">
+            <form method="POST" enctype="multipart/form-data" novalidate>{{ form.hidden_tag() }}
+                <div class="form-floating mb-3">{{ form.name(class='form-control', placeholder='სახელი') }}<label>{{ form.name.label }}</label>
+                </div>
+                <div class="form-floating mb-3">{{ form.email(class='form-control', placeholder='ელფოსტა') }}<label>{{ form.email.label }}</label>
+                </div>
+                <div class="mb-3">{{ form.image(class='form-control') }}</div>
+                {{ form.submit(class='btn btn-primary') }}</form>
+        </div>
+    </div>{% endblock %}

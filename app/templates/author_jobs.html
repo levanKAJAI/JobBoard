@@ -1,0 +1,10 @@
+{% extends "base.html" %}{% block content %}<h2>ავტორის ვაკანსიები: {{ user.name }}</h2>
+    <div class="row">{% for job in jobs %}
+        <div class="col-md-4">
+            <div class="card mb-3 h-100">
+                <div class="card-body"><h5 class="card-title">{{ job.title }}</h5>
+                    <p class="card-text">{{ job.short_desc }}</p><a
+                            href="{{ url_for('main.job_detail', job_id=job.id) }}" class="btn btn-primary">Read More</a>
+                </div>
+            </div>
+        </div>{% else %}<p>ამ ავტორს ჯერ არ აქვს ვაკანსიები.</p>{% endfor %}</div>{% endblock %}
